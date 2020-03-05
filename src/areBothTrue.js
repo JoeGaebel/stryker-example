@@ -1,0 +1,1 @@
+export const areBothTrue = (a, b) => a && b;

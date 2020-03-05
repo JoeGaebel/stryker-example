@@ -5,17 +5,11 @@ module.exports = function(config) {
     reporters: ["clear-text", "progress"],
     testRunner: "jest",
     coverageAnalysis: "off",
-    files: [
+    mutate: [
       'src/**/*.js',
+      '!src/*spec.js'
     ],
-    babel: {
-      optionsFile: 'babel.config.js',
-      options: {
-        cwd: 'src',
-        presets: ['@babel/env'],
-      },
-      extensions: ['.js']
-    },
+    babel: {optionsFile: 'babel.config.js'},
     transpilers: [
       'babel'
     ],
